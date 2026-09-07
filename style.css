@@ -1,0 +1,533 @@
+/* CSS Variables */
+
+:root {
+    --primary: #0b1f4d;
+    --accent: #f5b400;
+    --background: #f4f6f9;
+    --text: #222222;
+    --white: #ffffff;
+    --border: #dddddd;
+}
+
+
+/* General Page Styling */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar - FLEXBOX */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 15px 40px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+
+/* Horizontal Lines */
+
+hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 30px 0;
+}
+
+
+/* Sections */
+
+section {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+section h2 {
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: var(--primary);
+}
+
+
+/* Hero Section */
+
+.hero {
+    max-width: none;
+    min-height: 450px;
+    margin: 0;
+    padding: 120px 20px;
+    text-align: center;
+    color: var(--white);
+    background: linear-gradient(
+        135deg,
+        #071536,
+        #123b7a,
+        #d99b00
+    );
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+
+/* Buttons */
+
+button {
+    background-color: var(--accent);
+    color: #111111;
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+
+/* About Section */
+
+#about {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#about ul {
+    padding-left: 25px;
+}
+
+#about li {
+    margin: 8px 0;
+}
+
+
+/* Match Schedule */
+
+#matches {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Team Filter */
+
+#team {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+
+/* Responsive Tables */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--white);
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 14px;
+}
+
+td {
+    padding: 12px;
+    border: 1px solid var(--border);
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #fff8df;
+}
+
+
+/* BOOKING GRID */
+
+.booking-grid {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+/* Booking Section */
+
+#booking,
+#summary {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    margin: 0;
+    max-width: none;
+}
+
+
+/* Booking Form */
+
+form {
+    max-width: 650px;
+    margin: auto;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.form-row label {
+    width: 180px;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+form input,
+form select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+form input:focus,
+form select:focus {
+    outline: 2px solid var(--accent);
+}
+
+form button {
+    display: block;
+    margin: 20px auto 0;
+}
+
+
+/* My Bookings */
+
+#mybookings {
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Guidelines - CSS GRID */
+
+#guidelines {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#guidelines h2 {
+    grid-column: 1 / -1;
+}
+
+#guidelines article {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    border-top: 5px solid var(--accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s;
+}
+
+#guidelines article:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* ============================= */
+/* TABLET RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 15px 20px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    body {
+        padding-top: 110px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    section {
+        margin: 25px 20px;
+    }
+
+    .booking-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    #booking {
+        order: 1;
+    }
+
+    #summary {
+        order: 2;
+    }
+
+    #guidelines {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ============================= */
+/* MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 180px;
+    }
+
+
+    /* Mobile Navigation */
+
+    header {
+        padding: 12px 15px;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 400px;
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+
+    /* Sections */
+
+    section {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+
+    /* Booking Grid */
+
+    .booking-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+
+    /* Form */
+
+    .form-row {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 15px;
+    }
+
+    .form-row label {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    form input,
+    form select {
+        width: 100%;
+        max-width: none;
+    }
+
+    form button {
+        width: 100%;
+        margin: 15px 0 0;
+    }
+
+
+    /* Guidelines */
+
+    #guidelines {
+        grid-template-columns: 1fr;
+    }
+
+    #guidelines h2 {
+        grid-column: 1;
+    }
+
+
+    /* Tables */
+
+    .table-container {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+        min-width: 750px;
+    }
+
+
+    /* Buttons */
+
+    button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        padding: 20px 10px;
+    }
+
+}
